@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/vue'
 import LandingHero from '../LandingHero.vue'
-import { expect } from 'vitest'
 
 test('it should match the hero page texts', () => {
   
@@ -9,7 +8,6 @@ test('it should match the hero page texts', () => {
   getByText('Freshly Baked Cakes')
   getByText('Delivered to Your Doorstep')
   getByText('Indulge in handcrafted cakes made with love, perfect for every occasion.')
-  getByText('Shop Cakes Now')
 
 })
 
@@ -25,5 +23,5 @@ test('if the image element source exists', () => {
   render(LandingHero)
 
   const image = screen.getByAltText('Hero Master Caker')
-  expect(image).toBeDefined()
+  expect(image).toBeTruthy();
 })

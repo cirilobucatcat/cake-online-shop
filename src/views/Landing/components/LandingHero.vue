@@ -1,16 +1,16 @@
 <template>
-    <section class="relative h-screen overflow-x-hidden">
-        <img id="img-hero" class="size-[40rem] top-95 absolute-center" :src="heroImg" alt="Hero Master Caker">
+    <section class="relative h-screen overflow-hidden">
+        <img id="img-hero" class="size-[35rem] top-95 absolute-center" :src="heroImg" alt="Hero Master Caker">
         <template v-for="sparklesPlacement in sparklesPlacements">
             <Sparkle :class="`${sparklesPlacement} stroke-rose-500`" />
         </template>
 
         <h1 class="relative text-6xl font-bold font-bubblegum-sans text-shadow-md">
             <span id="text-hero-1" class="text-rose-600 absolute top-60 bg-white/50 px-8 py-4 [clip-path:polygon(4%_0%,100%_1%,95%_100%,0%_100%)]">Freshly Baked Cakes</span>
-            <span id="text-hero-2" class="text-yellow-800 absolute top-90 bg-white/50 px-8 py-4 [clip-path:polygon(4%_0%,100%_1%,95%_100%,0%_100%)]">Delivered to Your Doorstep</span>
+            <span id="text-hero-2" class="text-teal-600 absolute top-90 bg-white/50 px-8 py-4 [clip-path:polygon(4%_0%,100%_1%,95%_100%,0%_100%)]">Delivered to Your Doorstep</span>
         </h1>
-        <p id="subtext-hero" class="text-rose-600/75 font-medium absolute-center">Indulge in handcrafted cakes made with love, perfect for every occasion.</p>
-        <button id="btn-cta" class="absolute-center top-190 btn-hero flex justify-center items-center space-x-2">
+        <p id="subtext-hero" class="text-teal-600/75 top-[78%] font-medium absolute-center">Indulge in handcrafted cakes made with love, perfect for every occasion.</p>
+        <button data-testid="btn-cta" id="btn-cta" class="absolute-center btn-hero top-[85%] flex justify-center items-center space-x-2 w-[200px] h-[55px]">
             <ShoppingCartIcon class="size-6" />
             <span>Shop Now</span>
         </button>
@@ -21,7 +21,7 @@ import heroImg from '@/assets/images/hero.png'
 import Sparkle from '@/components/Sparkle.vue';
 import { ShoppingCartIcon } from '@heroicons/vue/16/solid';
 import gsap from 'gsap';
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted } from 'vue';
 
 const sparklesPlacements: string[] = [
     'animate-ping absolute left-100 top-80 !size-3',
@@ -37,21 +37,15 @@ const sparklesPlacements: string[] = [
 
 let timeline: GSAPTimeline;
 
-
 onMounted(() => {
     timeline = gsap.timeline();
+
     timeline.fromTo('#text-hero-1', { opacity:0, x: '0%' }, { opacity: 1, duration: 2, x: '100%' })
         .fromTo('#text-hero-2', { x: '200%' }, { duration: 2, x: '110%'  }, '<')
-        .fromTo('#img-hero', { scale: 0, display: 'block' }, { duration: 2, scale: 1  }, '<')
-        .fromTo('#subtext-hero', { top: '75%', opacity: 0 }, { opacity: 1, top: '74%'})
-        .fromTo('#btn-cta', { top: '82%', opacity: 0 }, { opacity: 1, top: '80%'})
+        .fromTo('#img-hero', { scale: 0, display: 'block' }, { duration: 2, scale: 1, ease: 'back.out'  }, '<')
+
+    setTimeout(() => timeline.kill(), 10_000)
+
 })
-
-
-onUnmounted(() => {
-    timeline.kill()
-})
-
-
-
+    
 </script>

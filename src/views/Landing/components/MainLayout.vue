@@ -1,5 +1,5 @@
 <template>
-    <main class="bg-rose-200 h-screen">
+    <main class="bg-rose-50 h-screen">
         <slot />
     </main>
 </template>

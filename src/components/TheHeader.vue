@@ -1,8 +1,13 @@
+<script setup lang="ts">
+import TextLogo from './TextLogo.vue';
+
+</script>
+
 <template>
-    <header class="bg-rose-200 z-50 sticky top-0 flex justify-between items-center px-4 py-4">
-        <h3 class="font-bold font-bubblegum-sans text-3xl">Master Baker</h3>
+    <header class="bg-rose-50 z-50 sticky top-0 flex justify-between items-center px-4 py-4">
+        <TextLogo />
         <nav>
-            <ul class="flex gap-x-8 justify-center items-center font-medium">
+            <ul class="flex gap-x-8 justify-center items-center font-medium text-teal-600">
                 <li>
                     <a href="#">Home</a>
                 </li>
