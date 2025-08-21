@@ -1,7 +1,6 @@
 <template>
-    <section id="features">
-        <div id="wave"></div>
-        <h3>
+    <section id="features" class="relative bg-rose-400">
+        <h3 class="text-center text-rose-200 text-4xl font-bold font-bubblegum-sans tracking-wider">
             Featured Cakes / Bestsellers
         </h3>
         <ul>

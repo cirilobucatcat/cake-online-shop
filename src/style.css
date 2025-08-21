@@ -7,6 +7,9 @@
 }
 
 @layer base {
+    html {
+        scroll-behavior: smooth;
+    }
     body {
         @apply relative font-open-sans not-italic;
         font-optical-sizing: auto;
@@ -21,7 +24,7 @@
 
 @layer components {
     .btn-hero {
-        @apply cursor-pointer text-slate-50 bg-yellow-700 px-5 py-3 shadow-md rounded-full font-semibold;
+        @apply cursor-pointer text-slate-50 bg-yellow-700 hover:bg-yellow-800 px-5 py-3 shadow-md rounded-lg font-semibold transition-all delay-200;
     }
 
     .sparkle {
@@ -29,33 +32,24 @@
     }
 }
 
-#wave {
-  position: relative;
-  height: 70px;
-  width: 600px;
-  background: #e0efe3;
-}
+ .wave-divider {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
 
-#wave:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 340px;
-  height: 80px;
-  background-color: white;
-  right: -5px;
-  top: 40px;
-}
+  .wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+  }
 
-#wave:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 300px;
-  height: 70px;
-  background-color: #e0efe3;
-  left: 0;
-  top: 27px;
-}
+  @media (min-width: 768px) {
+    .wave-divider svg {
+      height: 150px;
+    }
+  }

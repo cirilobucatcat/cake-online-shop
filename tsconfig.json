@@ -6,7 +6,8 @@
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "moduleResolution": "node"
   },
   "files": [],
   "references": [

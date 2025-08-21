@@ -1,8 +1,8 @@
 <template>
-    <header class="z-50 sticky top-0 flex justify-between items-center px-4 py-4">
+    <header class="bg-rose-200 z-50 sticky top-0 flex justify-between items-center px-4 py-4">
         <h3 class="font-bold font-bubblegum-sans text-3xl">Master Baker</h3>
         <nav>
-            <ul class="flex gap-x-8 justify-center items-center">
+            <ul class="flex gap-x-8 justify-center items-center font-medium">
                 <li>
                     <a href="#">Home</a>
                 </li>
