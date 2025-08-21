@@ -1,5 +1,6 @@
 <template>
     <section id="features">
+        <div id="wave"></div>
         <h3>
             Featured Cakes / Bestsellers
         </h3>
