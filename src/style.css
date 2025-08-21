@@ -32,37 +32,24 @@
     }
 }
 
- .wave-divider {
+.wave-divider {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-  }
+}
 
-  .wave-divider svg {
+.wave-divider svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 60px;
-  }
-
-.frame-classic {
-  display:inline-block;
-  padding:8px;
-  clip-path: polygon(1% 1%, 9% 7%, 22% 0%, 30% 6%, 40% 0%, 47% 6%, 55% 0%, 61% 5%, 68% 0%, 76% 5%, 88% 1%, 93% 5%, 100% 0%, 94% 11%, 100% 16%, 93% 20%, 100% 25%, 96% 30%, 100% 35%, 95% 41%, 100% 45%, 96% 50%, 100% 54%, 96% 61%, 100% 63%, 96% 71%, 100% 78%, 97% 84%, 100% 89%, 96% 95%, 100% 96%, 92% 99%, 81% 95%, 69% 100%, 57% 97%, 50% 100%, 41% 96%, 39% 100%, 29% 96%, 25% 100%, 18% 96%, 16% 100%, 8% 95%, 6% 100%, 0% 92%, 7% 79%, 0% 74%, 4% 64%, 0% 51%, 5% 40%, 0% 33%, 8% 26%, 0% 21%, 5% 12%);
-  box-shadow: 0 6px 18px rgba(0,0,0,.25);
 }
 
-.frame-classic img {
-  display:block;
-  width:300px;
-  height: 100%;
-}
-
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .wave-divider svg {
-      height: 150px;
+        height: 150px;
     }
-  }
+}
