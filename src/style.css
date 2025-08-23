@@ -30,6 +30,10 @@
     .sparkle {
         @apply fill-rose-600/50;
     }
+
+    .test {
+        @apply right-[25%];
+    }
 }
 
 .wave-divider {
