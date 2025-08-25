@@ -61,7 +61,7 @@
 /* HTML: <div class="zig-zag-box"></div> */
 .zig-zag-box {
   --s: 18px;  /* control the size of the spikes */
-  --w: 350px; /* preferred image width */
+  --w: 300px; /* preferred image width */
   
   width: round(var(--w),4*var(--s)); 
   aspect-ratio: 1;

@@ -4,7 +4,7 @@ import TextLogo from './TextLogo.vue';
 </script>
 
 <template>
-    <header class="hidden md:flex bg-rose-50 z-50 sticky top-0  justify-between items-center px-4 py-4">
+    <header class="hidden md:flex bg-rose-50 z-50 sticky top-0 justify-between items-center px-4 py-4">
         <TextLogo />
         <nav>
             <ul class="flex gap-x-8 justify-center items-center font-medium text-teal-600">
@@ -25,6 +25,6 @@ import TextLogo from './TextLogo.vue';
                 </li>
             </ul>
         </nav>
-        <button>Order Now</button>
+        <button>Sign in</button>
     </header>
 </template>
