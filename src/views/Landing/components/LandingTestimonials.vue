@@ -1,6 +1,6 @@
 <template>
     <section id="testimonials" class="bg-teal-600 py-4 w-full">
-        <h3 class="text-center text-rose-100 text-5xl my-12 font-bold font-bubblegum-sans tracking-wider">
+        <h3 class="text-center text-rose-200 text-5xl my-12 font-bold font-bubblegum-sans tracking-wider">
             Testimonials
         </h3>
 
@@ -10,7 +10,7 @@
             <div id="item-1" class="absolute top-0 left-[30%] w-[500px] py-2 flex flex-col items-start justify-between bg-teal-50 rounded-lg p-4">
                 <p class="line-clamp-3 my-2 text-teal-800">MasterCaker never disappoints. Their cakes are not only visually stunning but absolutely delicious. I recommend them to all my clients.</p>
                 <div class="flex items-center gap-x-4">
-                    <img src="https://placehold.co/300" width="50" class="rounded-full border border-teal-600" alt="">
+                    <img :src="profile1" width="50" class="rounded-full border border-teal-600" alt="">
                     <div class="grow py-2">
                         <h2 class="font-bubblegum-sans text-2xl text-teal-600 leading-5">Emma Rodriguez</h2>
                         <p class="text-slate-500 text-sm">Event Planner</p>
@@ -21,7 +21,7 @@
             <div id="item-2" class="absolute top-45 right-[20%] w-[500px] py-2 flex flex-col items-start justify-between bg-teal-50 rounded-lg p-4">
                 <p class="line-clamp-3 my-2 text-teal-800">"We order cakes from Sweet Delights for all our staff birthdays. Their consistency and quality are unmatched."</p>
                 <div class="flex items-center gap-x-4">
-                    <img src="https://placehold.co/300" width="50" class="rounded-full border border-teal-600" alt="">
+                    <img :src="profile2" width="50" class="rounded-full border border-teal-600" alt="">
                     <div class="grow py-2">
                         <h2 class="font-bubblegum-sans text-2xl text-teal-600 leading-5">James Kim</h2>
                         <p class="text-slate-500 text-sm">Restaurant Manager</p>
@@ -32,7 +32,7 @@
             <div id="item-3" class="absolute top-85 left-[30%] w-[500px] py-2 flex flex-col items-start justify-between bg-teal-50 rounded-lg p-4">
                 <p class="line-clamp-3 my-4 text-teal-800">My wedding cake was a dream come true. Elegant, perfectly moist, and everyone asked where it was from!</p>
                 <div class="flex items-center gap-x-4">
-                    <img src="https://placehold.co/300" width="50" class="rounded-full border border-teal-600" alt="">
+                    <img :src="profile3" width="50" class="rounded-full border-2 border-teal-600" alt="">
                     <div class="grow py-2">
                         <h2 class="font-bubblegum-sans text-2xl text-teal-600 leading-5">Sophia Lee</h2>
                         <p class="text-slate-500 text-sm">Bride</p>
@@ -44,6 +44,9 @@
 </template>
 <script setup lang="ts">
 import testimonialCake from '@/assets/images/testimonial.png'
+import profile1 from '@/assets/images/profile1.png'
+import profile2 from '@/assets/images/profile2.png'
+import profile3 from '@/assets/images/profile3.png'
 import gsap from 'gsap';
 import { onMounted } from 'vue';
 
