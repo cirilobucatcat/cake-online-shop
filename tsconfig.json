@@ -6,7 +6,7 @@
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "@testing-library/jest-dom"],
     "moduleResolution": "node"
   },
   "files": [],

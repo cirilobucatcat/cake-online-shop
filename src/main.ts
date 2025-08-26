@@ -4,7 +4,6 @@ import App from './App.vue'
 import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Draggable } from 'gsap/Draggable';
 
-gsap.registerPlugin(ScrollTrigger, Draggable);
+gsap.registerPlugin(ScrollTrigger);
 createApp(App).mount('#app')

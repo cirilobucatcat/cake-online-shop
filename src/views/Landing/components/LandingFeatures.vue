@@ -29,6 +29,7 @@ import cake5 from '@/assets/images/cake5.png'
 import { Draggable } from 'gsap/Draggable'
 import { onMounted } from 'vue'
 import ShopCard from '@/components/ShopCard.vue'
+import gsap from 'gsap'
 
 const items = [
     {
@@ -57,9 +58,9 @@ const items = [
     },
     {
         img: cake2,
-        title: 'Classic Chocolate Truffle',
+        title: 'Classic Chocolate Truffle 2',
         description: 'Rich & moist, our customer favorite.',
-        price: 100
+        price: 200
     },
     {
         img: cake3,
@@ -83,13 +84,16 @@ const items = [
 
 onMounted(() => {
 
+    if(typeof window === 'undefined') return;
+
     const carousel = document.querySelector<HTMLElement>('#carousel');
     const container = document.querySelector<HTMLElement>('#carousel-container');
 
     if(!carousel || !container) return;
-
+    
     const maxScroll = carousel.scrollWidth - container.offsetWidth;
-
+    
+    gsap.registerPlugin(Draggable)
     Draggable.create(carousel, {
         type: 'x',
         bounds: { minX: -maxScroll, maxX: 0 },

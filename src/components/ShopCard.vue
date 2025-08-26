@@ -1,6 +1,6 @@
 <template>
     <article 
-        id="item"
+        data-testid="shop-card-item"
         class="grow-0 w-92 py-8 shrink-0 rounded-md flex flex-col items-center justify-center"
     >
         <img 
@@ -16,13 +16,13 @@
                 {{ title }}
             </h3>
             <button class="bg-teal-600 p-2 rounded-md me-10 outline-none cursor-pointer">
-                <ShoppingBagIcon class="size-6 text-rose-100" />
+                <ShoppingBagIcon data-testid="btn-icon" class="size-6 text-rose-100" />
             </button>
             <br>
         </div>
         <div class="w-full flex items-center justify-between">
-            <p class="font-bold grow font-bubblegum-sans tracking-wider text-rose-600 text-3xl ms-10">{{ formattedPrice }}</p>
-            <a href="#" class="text-teal-600 underline me-10 text-xs">More details</a>
+            <p data-testid="test-price" class="font-bold grow font-bubblegum-sans tracking-wider text-rose-600 text-3xl ms-10">{{ formattedPrice }}</p>
+            <a data-testid="link-more-details" href="#" class="text-teal-600 underline me-10 text-xs">More details</a>
         </div>
     </article>
 </template>
