@@ -4,7 +4,7 @@ import TextLogo from './TextLogo.vue';
 </script>
 
 <template>
-    <header class="hidden md:flex bg-rose-50 z-50 sticky top-0 justify-between items-center px-4 py-4">
+    <header v-bind:class="$attrs.class" class="w-full h-screen flex flex-col fixed md:w-[unset] md:h-[unset] md:flex-row bg-rose-50 z-50 md:sticky md:top-0 md:justify-between md:items-center px-4 py-4">
         <TextLogo />
         <nav>
             <ul class="flex gap-x-8 justify-center items-center font-medium text-teal-600">

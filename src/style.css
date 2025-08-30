@@ -9,6 +9,7 @@
 @layer base {
     html {
         scroll-behavior: smooth;
+        cursor: url('./assets/vectors/normal.cur') 32 32, default;
     }
     body {
         @apply relative font-open-sans not-italic;
@@ -34,6 +35,14 @@
     .test {
         @apply right-[25%];
     }
+
+    .btn-menu {
+        @apply relative w-[30px] h-[20px] cursor-pointer flex flex-col justify-between;
+    }
+
+    .bar {
+        @apply h-[3px] w-full bg-rose-600 rounded-[5px] transition-all duration-[0.4s]
+    }
 }
 
 .wave-divider {
@@ -52,17 +61,27 @@
     height: 60px;
 }
 
+.btn-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.btn-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
 @media (min-width: 768px) {
     .wave-divider svg {
         height: 150px;
     }
 }
 
-/* HTML: <div class="zig-zag-box"></div> */
 .zig-zag-box {
-  --s: 18px;  /* control the size of the spikes */
-  --w: 300px; /* preferred image width */
-  
+  --s: 18px; 
+  --w: 300px;
   width: round(var(--w),4*var(--s)); 
   aspect-ratio: 1;
   object-fit: cover;

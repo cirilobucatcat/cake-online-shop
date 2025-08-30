@@ -1,5 +1,5 @@
 <template>
-    <section id="testimonials" class="bg-teal-600 py-4 w-full h-svh">
+    <section id="testimonials" class="bg-teal-600 py-4 w-full h-[950px] overflow-hidden">
         <h3 class="text-center text-rose-200 text-2xl md:text-5xl lg:my-12 font-bold font-bubblegum-sans tracking-wider">
             Testimonials
         </h3>

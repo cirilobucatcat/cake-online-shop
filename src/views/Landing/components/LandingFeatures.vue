@@ -1,5 +1,5 @@
 <template>
-    <section id="features" class="relative bg-rose-200 py-4">
+    <section id="features" class="relative bg-rose-200 py-4 overflow-hidden">
         
         <h3 class="text-center text-rose-600 text-2xl lg:text-5xl lg:my-12 font-bold font-bubblegum-sans tracking-wider">
             Featured Cakes
