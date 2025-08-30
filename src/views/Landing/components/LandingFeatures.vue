@@ -1,13 +1,13 @@
 <template>
     <section id="features" class="relative bg-rose-200 py-4">
         
-        <h3 class="text-center text-rose-600 text-5xl my-12 font-bold font-bubblegum-sans tracking-wider">
+        <h3 class="text-center text-rose-600 text-2xl lg:text-5xl lg:my-12 font-bold font-bubblegum-sans tracking-wider">
             Featured Cakes
         </h3>
 
         <div class="w-full flex items-center justify-center">
             <div id="carousel-container" class="relative w-[90%] overflow-x-hidden">
-                <div id="carousel" class="w-full flex gap-x-4 cursor-grab">
+                <div id="carousel" class="w-full flex gap-x-2 lg:gap-x-4 cursor-grab">
                     <ShopCard 
                         v-for="({ img, title, price }, index) in items" 
                         :key="index" 

@@ -1,16 +1,16 @@
 <template>
     <article 
         data-testid="shop-card-item"
-        class="grow-0 w-92 py-8 shrink-0 rounded-md flex flex-col items-center justify-center"
+        class="grow-0 w-80 lg:w-92 py-8 shrink-0 rounded-md flex flex-col items-center justify-center"
     >
         <img 
-            class="zig-zag-box bg-rose-100 object-contain" 
+            class="zig-zag-box bg-rose-100 object-contain !w-[230px]" 
             :src="img" 
             :alt="`Image for ${title}`"
         >
         <div class="w-full min-h-[60px] flex items-center justify-between mt-4">
             <h3 
-                class="text-xl grow text-teal-600 tracking-wider line-clamp-2 font-bold font-bubblegum-sans ms-10"
+                class="text-lg lg:text-xl grow text-teal-600 tracking-wider line-clamp-1 lg:line-clamp-2 font-bold font-bubblegum-sans ms-10"
                 :title
             >
                 {{ title }}
@@ -21,7 +21,7 @@
             <br>
         </div>
         <div class="w-full flex items-center justify-between">
-            <p data-testid="test-price" class="font-bold grow font-bubblegum-sans tracking-wider text-rose-600 text-3xl ms-10">{{ formattedPrice }}</p>
+            <p data-testid="test-price" class="font-bold grow font-bubblegum-sans tracking-wider text-rose-600 text-lg lg:text-3xl ms-10">{{ formattedPrice }}</p>
             <a data-testid="link-more-details" href="#" class="text-teal-600 underline me-10 text-xs">More details</a>
         </div>
     </article>
