@@ -1,5 +1,5 @@
 <template>
-    <section class="relative h-full overflow-hidden">
+    <section id="hero" class="relative h-full overflow-hidden">
         <img 
             id="img-hero" 
             class="size-[20rem] md:size-[25rem] 2xl:size-[30rem] top-50 md:top-50 lg:top-50 xl:top-50 2xl:top-60 absolute-center"

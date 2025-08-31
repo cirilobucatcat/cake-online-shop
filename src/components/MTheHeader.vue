@@ -1,14 +1,11 @@
-<script setup lang="ts">
-import { useTemplateRef } from 'vue';
-import MobileMenu from './MobileMenu.vue';
-import TextLogo from './TextLogo.vue';
-
-const mobileMenuRef = useTemplateRef('mobileMenu');
-</script>
-
 <template>
-    <header v-bind:class="$attrs.class" class="fixed z-50 w-full bg-rose-50 h-[70px]">
+    <header 
+        v-bind:class="$attrs.class" 
+        class="fixed z-50 w-full bg-rose-50 h-[70px]"
+        role="navigation"
+    >
         <nav 
+            aria-details="Mobile Navigation"
             class="w-full h-screen bg-rose-50 z-50 transform transition-transform duration-500 ease-in-out translate-x-[500%]" 
             :class="{'!translate-x-0' : mobileMenuRef?.isActive}"
         >
@@ -20,10 +17,10 @@ const mobileMenuRef = useTemplateRef('mobileMenu');
                     <a href="#features">Features</a>
                 </li>
                 <li>
-                    <a href="#testemonials">Testemonials</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#testimonials">Testimonials</a>
                 </li>
                 <li>
                     <a href="#contact">Contact Us</a>
@@ -37,3 +34,10 @@ const mobileMenuRef = useTemplateRef('mobileMenu');
         <MobileMenu class="absolute right-5 top-5 z-50" ref="mobileMenu" />
     </header>
 </template>
+<script setup lang="ts">
+import { useTemplateRef } from 'vue';
+import MobileMenu from './MobileMenu.vue';
+import TextLogo from './TextLogo.vue';
+
+const mobileMenuRef = useTemplateRef('mobileMenu');
+</script>

@@ -6,9 +6,11 @@ import WaveBlob from '@/components/WaveBlob.vue';
 import { ArrowUpIcon } from '@heroicons/vue/16/solid';
 import { computed } from 'vue';
 import { useScroll } from '@/composables/scroll';
+import LandingAbout from './components/LandingAbout.vue';
 
 const { scrollY } = useScroll();
 const isBeyondHeroSection = computed<boolean>(() => scrollY.value > 1000)
+
 </script>
 
 <template>
@@ -31,6 +33,14 @@ const isBeyondHeroSection = computed<boolean>(() => scrollY.value > 1000)
             svg-class="fill-teal-600 dark:fill-teal-50" 
             container-class="bg-rose-200" 
         />
+        <LandingAbout />
+        <WaveBlob 
+            svg-class="fill-rose-600 dark:fill-rose-50" 
+            container-class="bg-teal-600" 
+        />
         <LandingTestimonials />
+        <footer class="bg-teal-600 flex items-center justify-center">
+            Master Baker &copy; {{ new Date().getFullYear() }}
+        </footer>
     </div>
 </template>

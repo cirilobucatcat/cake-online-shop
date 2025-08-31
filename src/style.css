@@ -8,8 +8,7 @@
 
 @layer base {
     html {
-        scroll-behavior: smooth;
-        cursor: url('./assets/vectors/normal.cur') 32 32, default;
+        cursor: url('./assets/vectors/normal.cur') 16 16, default;
     }
     body {
         @apply relative font-open-sans not-italic;
@@ -30,10 +29,6 @@
 
     .sparkle {
         @apply fill-rose-600/50;
-    }
-
-    .test {
-        @apply right-[25%];
     }
 
     .btn-menu {

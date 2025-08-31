@@ -1,6 +1,6 @@
 <template>
-    <section id="testimonials" class="bg-teal-600 py-4 w-full h-[950px] overflow-hidden">
-        <h3 class="text-center text-rose-200 text-2xl md:text-5xl lg:my-12 font-bold font-bubblegum-sans tracking-wider">
+    <section id="testimonials" class="bg-rose-600 py-4 w-full h-[950px] overflow-hidden">
+        <h3 class="text-center text-teal-50 text-2xl md:text-5xl lg:my-12 font-bold font-bubblegum-sans tracking-wider">
             Testimonials
         </h3>
         <div id="testimonials-container" class="relative flex items-center justify-center">

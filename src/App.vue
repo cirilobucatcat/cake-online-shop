@@ -7,7 +7,7 @@
 </template>
 <script setup lang="ts">
 import LandingIndex from '@/views/Landing/LandingIndex.vue';
-import MainLayout from './views/Landing/components/MainLayout.vue';
+import MainLayout from './views/MainLayout.vue';
 import TheHeader from './components/TheHeader.vue';
 import MTheHeader from './components/MTheHeader.vue';
 </script>
